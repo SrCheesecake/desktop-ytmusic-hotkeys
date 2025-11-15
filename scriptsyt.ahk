@@ -27,8 +27,6 @@ global J2:=A_ScreenHeight*360/768
             Send("m")
             Sleep(200)
             WinMinimize("YouTube Music")
-            Sleep(200)
-            MouseClick()
         }
     }
 }
@@ -37,20 +35,11 @@ global J2:=A_ScreenHeight*360/768
 {
     if(WinExist("YouTube Music"))
     {
-        if(WinActive("YouTube Music"))
-        {
-            Send(" ")
-        }
-        else
-        {
         WinActivate("YouTube Music")
         Sleep(200)
         Send(" ")
         Sleep(200)
         WinMinimize("YouTube Music")
-        Sleep(200)
-        MouseClick()
-        }
     }
 }
 ;when pressing RCtrl and the Right arrow, skips song
@@ -73,7 +62,7 @@ global J2:=A_ScreenHeight*360/768
             MouseClick("L",I2,J1,1,0)
             Sleep(200)
             WinMinimize("YouTube Music")
-            Sleep(400)
+            Sleep(200)
             MouseMove(X,Y,0)
         }
     }
@@ -88,7 +77,7 @@ global J2:=A_ScreenHeight*360/768
             MouseGetPos(&X,&Y)
             Sleep(200)
             MouseClick("L",I1,J1,1,0)
-            Sleep(400)
+            Sleep(200)
             MouseMove(X,Y,0)
         }
         else
@@ -99,7 +88,7 @@ global J2:=A_ScreenHeight*360/768
             MouseClick("L",I1,J1,1,0)
             Sleep(200)
             WinMinimize("YouTube Music")
-            Sleep(400)
+            Sleep(200)
             MouseMove(X,Y,0)
         }
     }
@@ -109,40 +98,25 @@ global J2:=A_ScreenHeight*360/768
 {
     if(WinExist("YouTube Music"))
     {
+        Sleep(100)
         if(WinActive("Youtube Music"))
         {
-            MouseGetPos(&X,&Y)
-            Sleep(200)
-            MouseClick("WheelUp",I3,J2,1,0)
-            Sleep(50)
-            MouseClick("WheelUp")
-            Sleep(50)
-            MouseClick("WheelUp")
-            Sleep(50)
-            MouseClick("WheelUp")
-            Sleep(50)
-            MouseClick("WheelUp")
-            Sleep(400)
-            MouseMove(X,Y,0)
+            Send('{Up}')
+            Send('{Up}')
+            Send('{Up}')
+            Send('{Up}')
+            Send('{Up}')
         }
         else
         {
-            MouseGetPos(&X,&Y)
             WinActivate("YouTube Music")
             Sleep(200)
-            MouseClick("WheelUp",I3,J2,1,0)
-            Sleep(50)
-            MouseClick("WheelUp")
-            Sleep(50)
-            MouseClick("WheelUp")
-            Sleep(50)
-            MouseClick("WheelUp")
-            Sleep(50)
-            MouseClick("WheelUp")
-            Sleep(200)
+            Send('{Up}')
+            Send('{Up}')
+            Send('{Up}')
+            Send('{Up}')
+            Send('{Up}')
             WinMinimize("YouTube Music")
-            Sleep(400)
-            MouseMove(X,Y,0)
         }
     }
 }
@@ -151,40 +125,25 @@ global J2:=A_ScreenHeight*360/768
 {
     if(WinExist("YouTube Music"))
     {
+        Sleep(100)
         if(WinActive("Youtube Music"))
         {
-            MouseGetPos(&X,&Y)
-            Sleep(200)
-            MouseClick("WheelDown",I3,J2,1,0)
-            Sleep(50)
-            MouseClick("WheelDown")
-            Sleep(50)
-            MouseClick("WheelDown")
-            Sleep(50)
-            MouseClick("WheelDown")
-            Sleep(50)
-            MouseClick("WheelDown")
-            Sleep(200)
-            MouseMove(X,Y,0)
+            Send('{Down}')
+            Send('{Down}')
+            Send('{Down}')
+            Send('{Down}')
+            Send('{Down}')
         }
         else
         {
-            MouseGetPos(&X,&Y)
             WinActivate("YouTube Music")
             Sleep(200)
-            MouseClick("WheelDown",I3,J2,1,0)
-            Sleep(50)
-            MouseClick("WheelDown")
-            Sleep(50)
-            MouseClick("WheelDown")
-            Sleep(50)
-            MouseClick("WheelDown")
-            Sleep(50)
-            MouseClick("WheelDown")
-            Sleep(200)
+            Send('{Down}')
+            Send('{Down}')
+            Send('{Down}')
+            Send('{Down}')
+            Send('{Down}')
             WinMinimize("YouTube Music")
-            Sleep(400)
-            MouseMove(X,Y,0)
         }
     }
 }
