@@ -1,4 +1,4 @@
-﻿/*
+/*
 These hotkeys are for more comfort, doing their action and putting you back where you were.
 The script is on default ahk settings and the desktop yt music app is on default sizing "view -> actual size".
 The sleep()'s are based on my pc's performance, specially those before Mouse functions, feel free to modify them.
@@ -63,8 +63,6 @@ global J2:=A_ScreenHeight*360/768
             MouseGetPos(&X,&Y)
             MouseClick("L",I2,J1,1,0)
             Sleep(200)
-            WinMinimize("YouTube Music")
-            Sleep(400)
             MouseMove(X,Y,0)
         }
         else
@@ -77,7 +75,6 @@ global J2:=A_ScreenHeight*360/768
             WinMinimize("YouTube Music")
             Sleep(400)
             MouseMove(X,Y,0)
-            MouseClick()
         }
     }
 }
@@ -104,7 +101,6 @@ global J2:=A_ScreenHeight*360/768
             WinMinimize("YouTube Music")
             Sleep(400)
             MouseMove(X,Y,0)
-            MouseClick()
         }
     }
 }
@@ -147,7 +143,6 @@ global J2:=A_ScreenHeight*360/768
             WinMinimize("YouTube Music")
             Sleep(400)
             MouseMove(X,Y,0)
-            MouseClick()
         }
     }
 }
@@ -170,8 +165,6 @@ global J2:=A_ScreenHeight*360/768
             Sleep(50)
             MouseClick("WheelDown")
             Sleep(200)
-            WinMinimize("YouTube Music")
-            Sleep(400)
             MouseMove(X,Y,0)
         }
         else
@@ -192,7 +185,6 @@ global J2:=A_ScreenHeight*360/768
             WinMinimize("YouTube Music")
             Sleep(400)
             MouseMove(X,Y,0)
-            MouseClick()
         }
     }
 }
