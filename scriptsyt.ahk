@@ -99,23 +99,24 @@ global J2:=A_ScreenHeight*360/768
     if(WinExist("YouTube Music"))
     {
         Sleep(100)
-        if(WinActive("Youtube Music"))
+        if(WinActive("Youtube Music") == true)
         {
-            Send('{Up}')
-            Send('{Up}')
-            Send('{Up}')
-            Send('{Up}')
-            Send('{Up}')
+            loop(5)
+            {
+                Send('{Up}')
+                Sleep(50)
+            }
+
         }
         else
         {
             WinActivate("YouTube Music")
             Sleep(200)
-            Send('{Up}')
-            Send('{Up}')
-            Send('{Up}')
-            Send('{Up}')
-            Send('{Up}')
+            loop(5)
+            {
+                Send('{Up}')
+                Sleep(50)
+            }
             WinMinimize("YouTube Music")
         }
     }
@@ -128,21 +129,21 @@ global J2:=A_ScreenHeight*360/768
         Sleep(100)
         if(WinActive("Youtube Music"))
         {
-            Send('{Down}')
-            Send('{Down}')
-            Send('{Down}')
-            Send('{Down}')
-            Send('{Down}')
+            loop(5)
+            {
+                Send('{Down}')
+                Sleep(50)
+            }
         }
         else
         {
             WinActivate("YouTube Music")
             Sleep(200)
-            Send('{Down}')
-            Send('{Down}')
-            Send('{Down}')
-            Send('{Down}')
-            Send('{Down}')
+            loop(5)
+            {
+                Send('{Down}')
+                Sleep(50)
+            }
             WinMinimize("YouTube Music")
         }
     }
