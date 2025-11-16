@@ -155,22 +155,30 @@ global J2:= A_ScreenHeight*360/768
         if(WinActive(YTID))
         {
             MouseGetPos(&X,&Y)
-            ImageSearch(&I,&J,A_ScreenWidth/2,700*A_ScreenHeight/768,A_ScreenWidth-288*A_ScreenWidth/1360,A_ScreenHeight,"*30 *TransBlack like.png")
-            sleep(300)
-            MouseClick("L",I+5,J+5,1,0)
-            sleep(100)
-            MouseMove(X,Y,0)
+            try
+            {
+                ImageSearch(&I,&J,A_ScreenWidth/2,700*A_ScreenHeight/768,A_ScreenWidth-288*A_ScreenWidth/1360,A_ScreenHeight,"*30 *TransBlack like.png")
+                sleep(300)
+                MouseClick("L",I+5,J+5,1,0)
+                sleep(100)
+                MouseMove(X,Y,0)
+            }
+
+            
         }
         else
         {
             WinActivate(YTID)
             MouseGetPos(&X,&Y)
             Sleep(200)
-            ImageSearch(&I,&J,A_ScreenWidth/2,700*A_ScreenHeight/768,A_ScreenWidth-288*A_ScreenWidth/1360,A_ScreenHeight,"*30 *TransBlack like.png")
-            sleep(300)
-            MouseClick("L",I+5,J+5,1,0)
-            sleep(100)
-            MouseMove(X,Y,0)
+            try
+            {
+                ImageSearch(&I,&J,A_ScreenWidth/2,700*A_ScreenHeight/768,A_ScreenWidth-288*A_ScreenWidth/1360,A_ScreenHeight,"*30 *TransBlack like.png")
+                sleep(300)
+                MouseClick("L",I+5,J+5,1,0)
+                sleep(100)
+                MouseMove(X,Y,0)
+            }
             WinMinimize(YTID)
         }
     }
