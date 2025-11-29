@@ -22,11 +22,12 @@ global J2:= A_ScreenHeight*360/768
         }
         else
         {
+            C := WinGetTitle("A")
             WinActivate(YTID)
             Sleep(200)
             Send("m")
             Sleep(200)
-            WinMinimize(YTID)
+            WinActivate(C)
         }
     }
 }
@@ -35,11 +36,12 @@ global J2:= A_ScreenHeight*360/768
 {
     if(WinExist(YTID))
     {
+        C := WinGetTitle("A")
         WinActivate(YTID)
         Sleep(200)
         Send(" ")
         Sleep(200)
-        WinMinimize(YTID)
+        WinActivate(C)
     }
 }
 ;when pressing RCtrl and the Right arrow, skips song
@@ -56,12 +58,13 @@ global J2:= A_ScreenHeight*360/768
         }
         else
         {
+            C := WinGetTitle("A")
             MouseGetPos(&X,&Y)
             WinActivate(YTID)
             Sleep(200)
             MouseClick("L",I2,J1,1,0)
             Sleep(200)
-            WinMinimize(YTID)
+            WinActivate(C)
             Sleep(200)
             MouseMove(X,Y,0)
         }
@@ -82,12 +85,13 @@ global J2:= A_ScreenHeight*360/768
         }
         else
         {
+            C := WinGetTitle("A")
             MouseGetPos(&X,&Y)
             WinActivate(YTID)
             Sleep(200)
             MouseClick("L",I1,J1,1,0)
             Sleep(200)
-            WinMinimize(YTID)
+            WinActivate(C)
             Sleep(200)
             MouseMove(X,Y,0)
         }
@@ -109,6 +113,7 @@ global J2:= A_ScreenHeight*360/768
         }
         else
         {
+            C := WinGetTitle("A")
             WinActivate(YTID)
             Sleep(200)
             loop(5)
@@ -116,7 +121,7 @@ global J2:= A_ScreenHeight*360/768
                 Send('{Up}')
                 Sleep(50)
             }
-            WinMinimize(YTID)
+            WinActivate(C)
         }
     }
 }
@@ -136,6 +141,7 @@ global J2:= A_ScreenHeight*360/768
         }
         else
         {
+            C := WinGetTitle("A")
             WinActivate(YTID)
             Sleep(200)
             loop(5)
@@ -143,7 +149,7 @@ global J2:= A_ScreenHeight*360/768
                 Send('{Down}')
                 Sleep(50)
             }
-            WinMinimize(YTID)
+            WinActivate(C)
         }
     }
 }
@@ -168,6 +174,8 @@ global J2:= A_ScreenHeight*360/768
         }
         else
         {
+            C := WinGetTitle("A")
+            sleep(200)
             WinActivate(YTID)
             MouseGetPos(&X,&Y)
             Sleep(200)
@@ -179,7 +187,7 @@ global J2:= A_ScreenHeight*360/768
                 sleep(100)
                 MouseMove(X,Y,0)
             }
-            WinMinimize(YTID)
+            WinActivate(C)
         }
     }
 }
@@ -217,6 +225,7 @@ global J2:= A_ScreenHeight*360/768
         }
         else
         {
+            C := WinGetTitle("A")
             MouseGetPos(&X,&Y)
             WinActivate(YTID)
             sleep(400)
@@ -242,7 +251,7 @@ global J2:= A_ScreenHeight*360/768
                 sleep(100)
                 MouseMove(X,Y,0)
             }
-            WinMinimize(YTID)
+            WinActivate(C)
         }
     }
 }
